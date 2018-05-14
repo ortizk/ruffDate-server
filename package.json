@@ -1,6 +1,9 @@
 {
   "name": "pupDate",
-  "version": "9.8.0",
+  "version": "0.0.1",
+  "engines": {
+    "node": "9.3.0"
+  },
   "private": true,
   "main": "app.js",
   "scripts": {
