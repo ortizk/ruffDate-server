@@ -13,7 +13,12 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pupdate', {useM
 
 // Set up middleware
 app.use(logger('dev'));
-app.use(cors());
+app.use(cors({
+	origin: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    exposedHeaders: ['x-auth-token']
+}));
 app.use(bodyParser.json({limit: "50mb"}));
 app.use(bodyParser.urlencoded({extended: true}));
 
