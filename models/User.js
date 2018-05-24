@@ -26,11 +26,11 @@ var userSchema = mongoose.Schema({
   },
   address: {
     type: String,
-    required: true
+    required: false
   },
   city: {
     type: String,
-    required: true
+    required: false
   },
   state: {
     type: String,
