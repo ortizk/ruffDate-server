@@ -51,6 +51,18 @@ router.get('/profile/:userId', function(req, res) {
 	});
 });
 
+// ----- DELETING A DOG 
+router.delete('/profile', function(req.res){
+	UserDb.findById(req.params.userId, (err, user) => {
+		let i = user.dogs.indexOf(req.params.id);
+		user.dogs.splice(i, 1);
+		user.save();
+		console.log(user.dogs);
+		res.send('deleted dog')
+	})
+
+})
+
 
 
 module.exports = router;
