@@ -30,10 +30,6 @@ router.post('/getdogsnearby', function(req, res){
 	.catch(err => {
 		console.log('error happened', err);
 	})
-	// console.log(matches);
-	// console.log('err', err)
-	// console.log('body', body)
-	// res.send('temporary stub from zipapi.js');
 	});
 });
 
