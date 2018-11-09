@@ -6,7 +6,8 @@ var DogSchema = new Schema({
 	breed: String,
 	temperament: String,
 	age: Number,
-	size: String
+	size: String,
+	img: String
 });
 
 module.exports = mongoose.model('Dogs', DogSchema);
